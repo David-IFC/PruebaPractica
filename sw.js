@@ -34,9 +34,13 @@ self.addEventListener('activate', event => {
 // Fetch: Responder desde cache o red
 self.addEventListener('fetch', event => {
     event.respondWith(
-        caches.match(event.request)
+        caches.match(event.request, { ignoreSearch: true })
             .then(response => {
-                return response || fetch(event.request);
+                // Si lo encuentra en caché, lo sirve. Si no, intenta fetch.
+                return response || fetch(event.request).catch(() => {
+                    // Manejo silencioso del error de red en modo offline
+                    return null;
+                });
             })
     );
 });

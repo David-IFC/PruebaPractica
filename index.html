@@ -7,6 +7,9 @@
     <meta name="theme-color" content="#1a1a1a">
     <title>Natalie Portman | Actriz, Productora y Directora</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon-192.png">
+    
     <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="assets/icon-192.png">
@@ -137,7 +140,6 @@
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('Service Worker registrado', reg))
                     .catch(err => console.log('Error al registrar SW', err));
             });
         }
