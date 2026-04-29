@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página oficial de fans de Natalie Portman - Biografía, Filmografía y más.">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Natalie Portman | Actriz, Productora y Directora</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Accesibilidad: Enlace de salto al contenido principal -->
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+
+    <header class="main-header">
+        <nav class="nav-container" aria-label="Navegación principal">
+            <div class="logo">Natalie Portman</div>
+            <ul class="nav-links">
+                <li><a href="#bio">Biografía</a></li>
+                <li><a href="#movies">Películas</a></li>
+                <li><a href="#awards">Premios</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Natalie Portman</h1>
+                <p class="hero-subtitle">Una trayectoria de excelencia desde 1994.</p>
+                <a href="#bio" class="btn btn-primary">Conocer más</a>
+            </div>
+            <!-- Imagen de Natalie Portman (Alt descriptivo para accesibilidad) -->
+            <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=2000" alt="Ambiente cinematográfico elegante" class="hero-image">
+        </section>
+
+        <!-- Biografía -->
+        <section id="bio" class="section bio-section" aria-labelledby="bio-title">
+            <div class="container">
+                <h2 id="bio-title">Biografía</h2>
+                <div class="grid-2">
+                    <article class="bio-text">
+                        <p>
+                            Natalie Portman (nacida como Natalie Hershlag; 9 de junio de 1981) es una aclamada actriz, productora y directora israelí-estadounidense. 
+                            Conocida por su versatilidad, ha destacado tanto en grandes superproducciones como en cine independiente.
+                        </p>
+                        <p>
+                            A los 11 años, debutó en <em>Léon: The Professional</em> (1994). Mientras su carrera despegaba, priorizó su educación, 
+                            graduándose en Psicología por la <strong>Universidad de Harvard</strong> en 2003.
+                        </p>
+                    </article>
+                    <figure class="bio-image-container">
+                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1000" alt="Representación de la etapa académica y profesional" class="rounded-img">
+                        <figcaption>Trayectoria de excelencia académica y profesional.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filmografía Destacada -->
+        <section id="movies" class="section movies-section" aria-labelledby="movies-title">
+            <div class="container">
+                <h2 id="movies-title">Filmografía Destacada</h2>
+                <div class="movie-grid">
+                    <article class="movie-card">
+                        <h3>Black Swan (2010)</h3>
+                        <p>Interpretó a Nina Sayers, papel que le valió el Óscar a Mejor Actriz.</p>
+                    </article>
+                    <article class="movie-card">
+                        <h3>V for Vendetta (2005)</h3>
+                        <p>Un papel icónico donde demostró su compromiso físico y emocional.</p>
+                    </article>
+                    <article class="movie-card">
+                        <h3>Star Wars: Prequels</h3>
+                        <p>Como la Reina Padmé Amidala, alcanzó la fama mundial.</p>
+                    </article>
+                    <article class="movie-card">
+                        <h3>Jackie (2016)</h3>
+                        <p>Una interpretación magistral de Jacqueline Kennedy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premios -->
+        <section id="awards" class="section awards-section" aria-labelledby="awards-title">
+            <div class="container">
+                <h2 id="awards-title">Premios y Reconocimientos</h2>
+                <ul class="awards-list">
+                    <li><strong>Óscar:</strong> Mejor Actriz por <em>Black Swan</em> (2011).</li>
+                    <li><strong>Globo de Oro:</strong> Mejor Actriz por <em>Black Swan</em> y Mejor Actriz de Reparto por <em>Closer</em>.</li>
+                    <li><strong>BAFTA:</strong> Mejor Actriz por <em>Black Swan</em>.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 Homenaje a Natalie Portman. Realizado con fines educativos.</p>
+            <nav aria-label="Redes sociales">
+                <ul class="social-links">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Twitter</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- API Integration Script -->
+    <script src="app.js"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registrado', reg))
+                    .catch(err => console.log('Error al registrar SW', err));
+            });
+        }
+    </script>
+</body>
+</html>
