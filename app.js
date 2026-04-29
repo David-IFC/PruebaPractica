@@ -46,6 +46,12 @@ function updateUI(person, movies, profiles) {
         bioImg.src = `${IMAGE_BASE_URL}${person.profile_path}`;
     }
 
+    // Actualizar Biografía
+    const bioContainer = document.querySelector('.bio-text');
+    if (person.biography) {
+        bioContainer.innerHTML = person.biography.split('\n').map(p => `<p>${p}</p>`).join('');
+    }
+
     // Actualizar Filmografía (Top 4 películas por popularidad o voto)
     const movieGrid = document.querySelector('.movie-grid');
     const topMovies = movies
@@ -63,7 +69,6 @@ function updateUI(person, movies, profiles) {
                 </div>
             </article>
         `).join('');
-    }
     }
 }
 
