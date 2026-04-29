@@ -12,7 +12,7 @@ Esta es una aplicación web progresiva (PWA) dedicada a la vida y carrera de la 
 ## Tecnologías Utilizadas
 
 - HTML5
-- CSS3 (Custom Properties, Flexbox, Grid)
+- CSS3 
 - Service Workers para PWA
 
 ## Instalación y Uso
