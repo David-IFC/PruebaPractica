@@ -1,5 +1,6 @@
 # Natalie Portman - Web App Premium (PWA)
 https://david-ifc.github.io/PruebaPractica/
+
 Esta es una aplicación web progresiva (PWA) dedicada a la vida y carrera de la actriz Natalie Portman. El proyecto ha sido diseñado con un enfoque en la estética premium, accesibilidad y usabilidad.
 
 ## Características Principales
