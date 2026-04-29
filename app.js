@@ -64,6 +64,7 @@ function updateUI(person, movies, profiles) {
             </article>
         `).join('');
     }
+    }
 }
 
 // Iniciar la carga de datos

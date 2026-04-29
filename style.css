@@ -263,13 +263,47 @@ figcaption {
 /* Premios */
 .awards-list {
     list-style: none;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
 }
 
 .awards-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition);
+}
+
+.awards-list li:hover {
+    background: rgba(212, 175, 55, 0.05);
+    border-color: var(--primary-color);
+    transform: translateX(10px);
+}
+
+.award-icon {
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    transition: var(--transition);
+}
+
+.awards-list li:hover .award-icon {
+    transform: rotate(15deg) scale(1.1);
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
 }
 
 /* Footer */
