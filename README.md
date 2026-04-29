@@ -1,2 +1,2 @@
 # PruebaPráctica
-En este repositorio esta la parte practica del examen de final del modulo MF0492/3_3
+En este repositorio esta la parte practica del examen de final del modulo MF049(2/3)_3
