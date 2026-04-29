@@ -2,7 +2,7 @@
     "name": "Natalie Portman Fan Page",
     "short_name": "Portman Web",
     "description": "Una página dedicada a la actriz Natalie Portman con información sobre su carrera y logros.",
-    "start_url": "/index.html",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#0f0f0f",
     "theme_color": "#d4af37",
