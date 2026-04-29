@@ -5,17 +5,21 @@ const ASSETS = [
     './style.css',
     './app.js',
     './manifest.json',
-    'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=2000',
-    'https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&q=80&w=1000',
     './assets/icon-192.png',
     './assets/icon-512.png'
 ];
 
-// Instalación: Cachear archivos estáticos
+// Instalación: Cachear archivos uno a uno para evitar que falle todo el proceso
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(ASSETS))
+        caches.open(CACHE_NAME).then(cache => {
+            console.log('Instalando caché...');
+            return Promise.all(
+                ASSETS.map(url => {
+                    return cache.add(url).catch(err => console.warn('No se pudo cachear:', url));
+                })
+            );
+        })
     );
 });
 
